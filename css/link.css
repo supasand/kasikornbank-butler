@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+a.black11-link:link,a.black11-link:active,a.black11-link:visited  {color: #000; font-size:11px; font-weight:100; text-decoration:underline; }
+a.black11-link:hover {color:#2A8301; font-size:11px; font-weight:100; text-decoration:underline;}
+
+a.red11-link:link,a.red11-link:active,a.red11-link:visited  {color: #000; font-size:11px; font-weight:100; text-decoration:underline; }
+a.red11-link:hover {color:#F90202; font-size:11px; font-weight:100; text-decoration:underline;}
+
+/*########################## nav btn */
+.btn1 a { width:144px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar.jpg) 0 0 no-repeat; text-indent:-9999px;}
+.btn2 a { width:135px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar.jpg) -144px 0 no-repeat; text-indent:-9999px;}
+.btn3 a { width:144px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar.jpg) -279px 0 no-repeat; text-indent:-9999px;}
+
+
+.btn1_on { width:144px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar.jpg) 0 -32px no-repeat; text-indent:-9999px;}
+.btn2_on { width:135px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar.jpg) -144px -32px no-repeat; text-indent:-9999px;}
+.btn3_on { width:144px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar.jpg) -279px -32px no-repeat; text-indent:-9999px;}
+
+
+.btn1 a:hover { width:144px; height:32px; cursor:pointer; background:url(../images/nav-bar.jpg) 0 -32px no-repeat; text-indent:-9999px;}
+.btn2 a:hover { width:135px; height:32px; cursor:pointer; background:url(../images/nav-bar.jpg) -144px -32px no-repeat; text-indent:-9999px;}
+.btn3 a:hover { width:144px; height:32px; cursor:pointer; background:url(../images/nav-bar.jpg) -279px -32px no-repeat; text-indent:-9999px;}
+
+.pay1 {width:101px; height:31px; background:url(../images/btn-continue.png) no-repeat 0 0; float:left; margin-right:3px; cursor:pointer;}
+.pay2 {width:84px; height:31px; background:url(../images/btn-cancel.png) no-repeat 0 0; float:left;margin-right:3px; cursor:pointer;}
+.pay3 {width:218px; height:31px; background:url(../images/btn-back.png) no-repeat 0 0; float:left;margin-right:3px; cursor:pointer;}
+.pay4 {width:103px; height:31px; background:url(../images/btn-again.png) no-repeat 0 0; float:left;margin-right:3px; cursor:pointer;}
+.pay5 {width:85px; height:31px; background:url(../images/btn-accept.png) no-repeat 0 0; float:left;margin-right:3px; cursor:pointer;}
+.pay1 a:hover {width:102px; height:31px; background:url(../images/btn-paynow.jpg) no-repeat 0; float:left; margin-right:3px; cursor:pointer;}
+.pay2 a:hover {width:86px; height:31px; background:url(../images/btn-cancel.png) 0 -31 no-repeat; float:left; margin-right:3px; cursor:pointer;}
+.pay3 a:hover {width:218px; height:31px; background:url(../images/btn-back.png) 0 -31 no-repeat; float:left;margin-right:3px; cursor:pointer;}
+.pay4 a:hover {width:103px; height:31px; background:url(../images/btn-again.png) 0 -31 no-repeat; float:left;margin-right:3px; cursor:pointer;}
+.pay5 a:hover {width:85px; height:31px; background:url(../images/btn-accept.png) 0 -31 no-repeat; float:left;margin-right:3px; cursor:pointer;}
+
+/*########################## nav btn1 */
+.btn11 a { width:144px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) 0 0 no-repeat; text-indent:-9999px;}
+.btn21 a { width:135px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) -144px 0 no-repeat; text-indent:-9999px;}
+.btn31 a { width:146px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) -279px 0 no-repeat; text-indent:-9999px;}
+.btn41 a { width:237px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) -425px 0 no-repeat; text-indent:-9999px;}
+.btn51 a { width:144px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) -662px 0 no-repeat; text-indent:-9999px;}
+
+.btn11_on { width:144px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) 0 -32px no-repeat; text-indent:-9999px;}
+.btn21_on { width:135px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) -144px -32px no-repeat; text-indent:-9999px;}
+.btn31_on { width:146px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) -279px -32px no-repeat; text-indent:-9999px;}
+.btn41_on { width:237px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) -425px -32px no-repeat; text-indent:-9999px;}
+.btn51_on { width:144px; height:32px; float:left; cursor:pointer; background:url(../images/nav-bar1.jpg) -662px -32px no-repeat; text-indent:-9999px;}
+
+.btn11 a:hover { width:144px; height:32px; cursor:pointer; background:url(../images/nav-bar1.jpg) 0 -32px no-repeat; text-indent:-9999px;}
+.btn21 a:hover { width:135px; height:32px; cursor:pointer; background:url(../images/nav-bar1.jpg) -144px -32px no-repeat; text-indent:-9999px;}
+.btn31 a:hover { width:146px; height:32px; cursor:pointer; background:url(../images/nav-bar1.jpg) -279px -32px no-repeat; text-indent:-9999px;}
+.btn41 a:hover { width:237px; height:32px; cursor:pointer; background:url(../images/nav-bar1.jpg) -425px -32px no-repeat; text-indent:-9999px;}
+.btn51 a:hover { width:144px; height:32px; cursor:pointer; background:url(../images/nav-bar1.jpg) -662px -32px no-repeat; text-indent:-9999px;}
+
+
+
+
+a.green11-link:link,a.green11-link:active,a.green11-link:visited  {color:#066E36; font-size:11px; font-weight:700; text-decoration:underline; }
+a.green11-link:hover {color:#066E36; font-size:11px; font-weight:700; text-decoration:underline;}
+

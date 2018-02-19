@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+*{ font-family: Verdana, Arial, verdana ,sans-serif; margin:0px;}
+.green12 {font-size:11px; color:#2A8301; font-weight:700;}
+.green14 {font-size:14px; color:#00AC48; font-weight:700;}
+.gray12 {font-size:10px; color:#949293; font-weight:100;}
+.black11 {font-size:11px; color:#000; font-weight:100;}
+.black11b {font-size:11px; color:#000; font-weight:700;}
+.green12login{font-size:12px; color:#095C21; font-weight:100;}
+.green12lbold{font-size:12px; color:#095C21; font-weight:700;}
+.black12 {font-size:12px; color:#000; font-weight:700;}
+.black10 {font-size:10px; color:#000; font-weight:700;}
+.red14 {font-size:14px; color:#FE0101; font-weight:700;}
+.black121 {font-size:12px; color:#000; font-weight:100;}
+.red11 {font-size:11px; color:#FE0101; font-weight:700;}
+
+#Msg 
+{
+font-size:12px; color:#FE0101; font-weight:700; 
+padding:0px 0px 0px 0px;
+text-align:center; width: 780px; height:12px;
+}
+.black11_8px {font-size:11px; color:#000; font-weight:100; padding:8px 0px 0px 0px;}
+.black11_6px {font-size:11px; color:#000; font-weight:100; padding:6px 0px 0px 0px;}
+.black11_4px {font-size:11px; color:#000; font-weight:100; padding:4px 0px 0px 0px;}
+
+.warning_Result 
+{
+font-size:14px; color:#FE0101; font-weight:700; width:700px; height:70px;
+float:left; padding: 0px 0px 0px 0px; position:relative; left:-160px;
+text-align:center;
+}

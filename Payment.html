@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Payment</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<link href="css/font.css" rel="stylesheet" type="text/css" />
+<link href="css/link.css" rel="stylesheet" type="text/css" />
+[{!pgw_js!}] 
+</head>
+
+<body>
+<div class="haed_payment"><!-- ############################## header -->
+	<h1 class="description">k-excellence</h1><font color="White">[{!server_name!}]</font>
+    <h2 class="logo">ธนาคารกสิกรไทย</h2>
+</div><!-- end head -->
+
+<div class="container">
+<div class="menutop"><!-- ################################## payment detail-->
+	<h3 class="top_content">payment detail</h3>
+    <div class="top_link">
+    <ul>
+        <li><a href="#"><img src="images/icon-kbank1.jpg" alt="" width="32" height="35" border="0" /></a></li>
+        <li><a href="#"><img src="images/icon-visa2.jpg" width="46" height="35" alt="" /></a></li>
+        <li><a href="#"><img src="images/icon-mas.jpg" width="37" height="35" alt="" /></a></li>
+	[{!pgw_jcb_logo2!}]
+        <li><a href="#"><img src="images/icon-debit.jpg" width="64" height="35" alt="" /></a></li>
+		<li><a href="#"><img src="images/icon-kbank.jpg" width=108" height="35" alt="" /></a></li>
+	[{!pgw_vbv_logo!}]
+	[{!pgw_securecode_logo!}]
+	[{!pgw_jcb_logo!}]
+    </ul>
+    </div>
+</div>
+<div class="top_text"><!-- ################################# text top web -->
+	<p class="black11">Your payment is now being processed on K-Payment Gateway, an online payment system by&nbsp;<a href="http://www.kasikornbank.com/" class="green11-link">KASIKORNBANK</a></p>
+    <span class="black11">K-Payment Gateway is the highly secure payment processor for your seller, <strong>[{!pgw_TradingName!}]</strong>. Please verify the purchase
+information and enter your Credit/Debit card details below.</span></div>
+<div class="top_nav"><!-- ############################## menu bar -->
+	<div class="btn1_on"><a href="#">payment detail</a></div>
+    <div class="btn2"><a href="#">payment confirmation</a></div>
+    <div class="btn3"><a href="#">currency conversion</a></div>
+    
+</div>
+
+<div class="area_payment"><!-- ########################## register form -->
+	<div class="detail_top">
+    	<ul><li>
+    	  <table width="72%" cellpadding="0" cellspacing="0">
+    	    <tr>
+    	      <td width="33%" height="20" align="right" class="black11b"><div align="left"><strong> Pay To: </strong></div></td>
+    	      <td width="67%" class="black11">[{!pgw_TradingName!}]</td>
+  	      </tr>
+            <tr>
+              <td height="20" align="right" class="black11b"><div align="left"><strong>Invoice No:</strong></div></td>
+              <td class="black11">[{!pgw_InvoiceNo!}]</td>
+            </tr>
+            <tr>
+              <td height="20" align="right" class="black11b"><div align="left"><strong>Payment For:</strong></div></td>
+              <td class="black11">[{!pgw_ProductDesc!}]</td>
+            </tr>
+            <tr>
+              <td align="right" class="black11b"><div align="left"><strong>Amount:</strong></div></td>
+              <td class="black11">[{!pgw_Amount!}] [{!pgw_Currency!}]</td>
+            </tr>
+  	    </table>
+    	  <br />
+    	</li>
+        </ul>
+    </div>
+    <div class="detail_form">
+    <div id="" class="left_f">
+        	<div class="list-card" style="margin-top:4px;"><p class="black11b">Card Type :</p>
+        	</div>
+            <div class="list-card" style="margin-top:18px;"><p class="black11b">Credit/Debit Card Number :</p>
+            </div>
+            <div class="list-card" style="margin-top:18px;"><p class="black11b">Security Code (CVV2) :</p>
+            </div>
+            <div class="list-card" style="margin-top:13px;"><p class="black11b">Expiry Date<br/>
+              (mm/yyyy) :</p></div>
+            <div class="list-card" style="margin-top:14px;"><p class="black11b">Card Holder Name :</p>
+            </div>
+            <div class="list-card" style="margin-top:14px;"><p class="black11b">Country of Issuing<br/>
+              Bank:</p></div>
+            <div class="list-card" style="margin-top:14px;"><p class="black11b">Issuing Bank :</p>
+            </div>
+            <div class="list-card" style="margin-top:14px;"><p class="black11b">Not in List<br/>
+              (Please Specify) :</p></div>
+      </div>
+        <div class="regis_form">
+        <div class="card"><img src="images/card.jpg" width="133" height="104" alt="" /></div>
+        <div class="txts"><p class="black11">Last 3 digits on the back of the card</p></div>
+        	<form id="cssform_pay" method="post" class="myform_pay" action="">
+            <div class="line_height_pay"><select name="cboCardType" onChange="checkCard()" id="cboCardType" tabindex="8">
+			[{!pgw_CardType!}]
+			</select><INPUT type="hidden" id=MERCHANT2 name=MERCHANT2 value="[{!pgw_MerchantID!}]"></div>
+            
+            <div class="line_height_pay" ><input name="txtCreditCard1" type="text" maxlength="4" id="txtCreditCard1" tabindex="3" class="black121" value="[{!pgw_Card1!}]" onclick="getResult()" onkeyup="onKeyUpNew('txtCreditCard1', 'txtCreditCard2',event)" style="width:50px;" />		    
+		    <input name="txtCreditCard2" type="text" maxlength="4" id="txtCreditCard2" tabindex="3" class="black121"  value="[{!pgw_Card2!}]" onkeyup="onKeyUpNew('txtCreditCard2', 'txtCreditCard3',event)" style="width:50px;" />		    
+		    <input name="txtCreditCard3" type="text" maxlength="4" id="txtCreditCard3" tabindex="3" class="black121"  value="[{!pgw_Card3!}]" onkeyup="onKeyUpNew('txtCreditCard3', 'txtCreditCard4',event)" style="width:50px;" />		    
+		    <input name="txtCreditCard4" type="text" maxlength="4" id="txtCreditCard4" tabindex="3" class="black121"  value="[{!pgw_Card4!}]" onkeyup="onKeyUpNew('txtCreditCard4', 'txtCVV',event)" style="width:50px;" />
+            </div>
+            
+        	<div class="line_height_pay"><input name="txtCVV" type="password" class="black121" id="txtCVV" style="width:35px;" tabindex="4" onkeyup="onKeyUpNew('txtCVV', 'cboMonth',event)" value="[{!pgw_CVV!}]" size="3" maxlength="3" />
+        	</div>
+            
+            
+            <div class="line_height_pay">
+              <select name="cboMonth" id="cboMonth" tabindex="5">
+                [{!pgw_Month!}]
+              </select>
+              <select name="cboYear" id="cboYear" tabindex="6">
+                [{!pgw_Year!}]
+              </select>
+              </div>
+            
+            <div class="line_height_pay"><input name="txtCHName" type="text" maxlength="40" id="txtCHName" tabindex="7" value="[{!pgw_CHName!}]" class="black121"/>
+            </div>
+            
+            <div class="line_height_pay">
+              <select name="cboCountry" onchange="getResult()" id="cboCountry" tabindex="9">
+                
+			[{!pgw_Country!}]
+			
+              </select>
+              </div>
+            <div class="line_height_pay">
+              <input id="optBOption1" checked="checked" type="radio" name="optbank" value="listed" />
+              <select name="cboBank" id="cboBank" [{!pgw_Bank_Event!}] tabindex="10">
+                [{!pgw_Bank!}]
+              </select>
+              </div>
+            
+            <div class="line_height_pay">
+              <input id="optBOption2" type="radio" name="optbank" value="other" />
+              <input name="txtBankOther" type="text" maxlength="60" id="txtBankOther" tabindex="4" [{!pgw_BankOther_Event!}] value="[{!pgw_BankOther!}]" class="black121" style="width:160px;" />
+            </div>
+          
+		    <span class="black11">[{!pgw_Message!}]            </span>
+	        <br />
+<!--						<div class="btn_paynow" id='pleaseWaitButtonDiv_btnSubmit'>-->
+			<div id='pleaseWaitButtonDiv_btnSubmit'>
+			<input type="image" name="imgPayNow1" id="imgPayNow1" tabindex="7" src="images/btn-paynow.jpg" border="0" onclick="PleaseWait('pleaseWaitButtonDiv_btnSubmit', 'pleaseWaitButtonDiv2_btnSubmit', 'Please Wait... ');" />
+			<input type="image" src="images/btn-cancel.png" width="84" height="31" border="0" id="cmdCancelPayment" name="cmdCancelPayment" />
+			</div>
+			</form>
+      </div>
+    </div>
+</div><!-- end area payment -->
+
+<div class="bottom_text"><!-- ################################# text top web -->
+	<p class="black11">Remarks : Your Credit/Debit card information is strictly secured under KBank's security system. The online merchants will see only the first and last Four digits of your Credit/Debit card number with no expiration date nor the CVV2 code.</p>
+    
+</div>
+
+<div class="footer"><!-- ############################### footer -->
+	<h4 class="bottom">เครือธนาคารกสิกรไทย</h4>
+    <div class="copyright"><p class="gray12">Copyright©[{!pgw_CurrentYear!}] KASIKORNBANK Public Company Limited. All rights reserved.</p></div>
+</div>
+
+</div><!-- end container -->
+</body>
+</html>
