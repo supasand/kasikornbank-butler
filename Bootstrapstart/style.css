@@ -14,18 +14,20 @@ body, html{
     height: 100%;
  	background-repeat: no-repeat;
  	background:url(background-payment.jpg);
- 	font-family: 'Oxygen', sans-serif;
+ 	font-family: 'Kanit', sans-serif;
     background-size: cover;
 }
 
 .main{
- 	margin:50px 15px;
+ 	margin:0px 15px;
 }
 
 h1.title { 
-	font-size: 50px;
-	font-family: 'Passion One', cursive; 
-	font-weight: 400; 
+	font-size: 28px;
+	font-family: 'Kanit', sans-serif;
+	font-weight: 400;
+    padding-bottom: 12px;
+    color: white;
 }
 
 hr{
@@ -39,6 +41,9 @@ hr{
 
 label{
 	margin-bottom: 15px;
+    color: white;
+    font-weight: 200;
+    margin-bottom: 5px;
 }
 
 input,
@@ -47,9 +52,9 @@ input::-webkit-input-placeholder {
     padding-top: 3px;
 }
 
+/*
 .main-login{
  	background-color: #fff;
-    /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -58,14 +63,19 @@ input::-webkit-input-placeholder {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 
 }
+*/
 .form-control {
     height: auto!important;
-padding: 8px 12px !important;
+    padding: 8px 12px !important;
 }
 .input-group {
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+    width: 100%;
+}
+.card-number{
+    width:25% !important;
 }
 #button {
     border: 1px solid #ccc;
@@ -93,13 +103,7 @@ padding: 8px 12px !important;
  	margin-top: 30px;
  	margin: 0 auto;
  	max-width: 400px;
-    padding: 10px 40px;
-	background:#009edf;
-	    color: #FFF;
-    text-shadow: none;
-	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
--moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+    padding: 10px 0px;
 
 }
 span.input-group-addon i {
@@ -114,6 +118,42 @@ span.input-group-addon i {
 .login-register{
 	font-size: 11px;
 	text-align: center;
+}
+
+.box {
+  width: 100%;
+  height: 200px;
+  background: #FFF;
+  margin: 40px auto;
+}
+/* Effect 1 */
+
+.effect1 {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  border-radius: 10px;
+}
+
+/* Just looks nicer */
+.credit-card-box .panel-heading{
+    padding-left: -10px;
+    padding-right: -10px;
+}
+.credit-card-box .panel-heading img {
+    min-width: 50px;
+}
+
+.credit-card-box .display-table {
+    display: table;
+}
+.credit-card-box .display-tr {
+    display: table-row;
+}
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
 }
 
 @media (orientation: portrait) {

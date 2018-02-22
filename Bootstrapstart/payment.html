@@ -7,7 +7,8 @@
 <html lang="en">
     <head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
+        
 		<!-- Website CSS style -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,8 +16,7 @@
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 		<link rel="stylesheet" href="style.css">
 		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet' type='text/css'>
 
 		<title>Admin</title>
         [{!pgw_js!}] 
@@ -25,62 +25,155 @@
 		<div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
-				<h5>Sign up once and watch any of our free demos.</h5>
+                  <h1 class="title" style="text-align: center;">Payment</h1>
+				  <div class="panel panel-default credit-card-box">
+                    <div class="panel-heading display-table" >
+                        <div class="row display-tr" >
+                            <div class="display-td" >
+                                <img class="img-responsive pull-left" src="logo-kbank-en.jpg">
+                            </div>
+                            <div class="display-td" >                            
+                                <img class="img-responsive pull-right" src="logo-kbank-th.jpg">
+                            </div>
+                        </div> 
+                        <div class="row display-tr" style="padding: 10px 5px;" >
+                            <div class="display-td" style="width:100px;" >
+                                <div class="pull-left"><strong>Pay To:</strong></div>
+                            </div>
+                            <div class="display-td" >
+                                <div class="pull-left">[{!pgw_TradingName!}]</div>
+                            </div>
+                        </div>
+                        <div class="row display-tr" style="padding: 10px 5px;" >
+                            <div class="display-td" style="width:100px;" >
+                                <div class="pull-left"><strong>Invoice No. :</strong></div>
+                            </div>
+                            <div class="display-td" >
+                                <div class="pull-left">[{!pgw_InvoiceNo!}]</div>
+                            </div>
+                        </div>
+                        <div class="row display-tr" style="padding: 10px 5px;" >
+                            <div class="display-td" style="width:100px;" >
+                                <div class="pull-left"><strong>Payment For :</strong></div>
+                            </div>
+                            <div class="display-td" >
+                                <div class="pull-left">	[{!pgw_ProductDesc!}]</div>
+                            </div>
+                        </div>
+                        <div class="row display-tr" style="padding: 10px 5px;" >
+                            <div class="display-td" style="width:100px;" >
+                                <div class="pull-left"><strong>Amount :</strong></div>
+                            </div>
+                            <div class="display-td" >
+                                <div class="pull-left">[{!pgw_Amount!}] [{!pgw_Currency!}]</div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    
 					<form class="" method="post" action="#">
 						
 						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Your Name</label>
+							<label for="name" class="cols-sm-2 control-label">Card Holder Name :</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+									<input type="text" class="form-control" name="card-holder-name" id="card-holder-name"  placeholder="Enter your Card Holder Name"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<label for="email" class="cols-sm-2 control-label">Card Number :</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+									
+									<input type="text" autocomplete="off" maxlength="4" pattern="\d{4}" class="form-control card-number pull-left" name="card-number1" id="card-number1" />
+                                    <input type="text" autocomplete="off" maxlength="4" pattern="\d{4}" class="form-control card-number pull-left" name="card-number2" id="card-number2" />
+                                    <input type="text" autocomplete="off" maxlength="4" pattern="\d{4}" class="form-control card-number pull-left" name="card-number3" id="card-number3" />
+                                    <input type="text" autocomplete="off" maxlength="4" pattern="\d{4}" class="form-control card-number pull-left" name="card-number4" id="card-number4" />
+                                    
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Username</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
-								</div>
-							</div>
+							<label for="expire-date" class="cols-sm-2 control-label">Expire Date :</label>
+							    <div class="cols-sm-10">
+                                    <select id="month" name="month" class="form-control pull-left" style="width:50%;">
+                                        <option value="" disabled selected>Please select month.</option>
+                                        [{!pgw_Month!}]
+                                    </select>
+                                    <select id="year" name="year" class="form-control pull-left" style="width:50%;">
+                                        <option value="" disabled selected>Please select year.</option>
+                                        [{!pgw_Year!}]
+                                    </select>
+                                </div>
 						</div>
 
 						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<label for="password" class="cols-sm-2 control-label">CCV2</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+									
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your CCV2"/>
 								</div>
 							</div>
 						</div>
-
-						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Card Type :</label>
 							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-								</div>
-							</div>
+                                <div class="input-group">
+                                    <select id="card-type" name="card-type" class="form-control pull-left" >
+                                        <option value="" disabled selected>Please select card type.</option>
+                                        [{!pgw_CardType!}]
+                                    </select>
+                                </div>
+                                
+                                </div>
+						</div>
+                        
+                        <div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Country :</label>
+							<div class="cols-sm-10">
+                                <div class="input-group">
+                                    <select id="country" name="country" class="form-control pull-left" >
+                                        <option value="" disabled selected>Please select country.</option>
+                                        [{!pgw_Country!}]
+                                    </select>
+                                </div>
+                            </div>
+						</div>
+                        
+                        <div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Issuing Bank :</label>
+							<div class="cols-sm-10">
+                                <div class="input-group">
+                                    <input type="radio" class="pull-left" name="issuing-bankcheck" style="width:10%;">
+                                    <select id="issuing-bank" name="issuing-bank" class="form-control pull-left" style="width:90%;" >
+                                        <option value="" disabled selected>Please select bank.</option>
+                                        [{!pgw_Bank!}]
+                                    </select>
+                                </div>
+                            </div>
+						</div>
+                        
+                        <div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Not in List (Please Specify) :</label>
+							<div class="cols-sm-10">
+                                <div class="input-group">
+                                    <input type="radio" class="pull-left" name="nobankcheck" style="width:10%;">
+                                    <input type="text" class="form-control pull-left" name="nobank" id="nobank" style="width:90%;"  placeholder="Enter your Card Holder Name"/>
+                                </div>
+                            </div>
 						</div>
 
-						<div class="form-group ">
-							<a href="http://deepak646.blogspot.in" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
-						</div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="subscribe btn btn-lg btn-block" type="button">Pay Now</button>
+                            </div>
+                        </div>
+
+						
 						
 					</form>
 				</div>
