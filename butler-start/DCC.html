@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Currency Conversion</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<link href="css/font.css" rel="stylesheet" type="text/css" />
+<link href="css/link.css" rel="stylesheet" type="text/css" />
+<script src="resources/pgwSnippet.js"></script>	
+</head>
+
+<body>
+<form name="frmDCC" method="post" action="DCC.aspx" id="frmDCC" onsubmit='return checkDCC();'>
+<div class="haed_payment"><!-- ############################## header -->
+	<h1 class="description">k-excellence</h1> <font color="White">[{!server_name!}]</font>
+    <h2 class="logo">ธนาคารกสิกรไทย</h2>
+</div><!-- end head -->
+
+<div class="container">
+<div class="menutop"><!-- ################################## payment detail-->
+	<h3 class="top_content">payment detail</h3>
+    <div class="top_link">
+    <ul>
+        <li><a href="#"><img src="images/icon-kbank1.jpg" alt="" width="32" height="35" border="0" /></a></li>
+        <li><a href="#"><img src="images/icon-visa2.jpg" width="46" height="35" alt="" /></a></li>
+        <li><a href="#"><img src="images/icon-mas.jpg" width="37" height="35" alt="" /></a></li>
+	[{!pgw_jcb_logo2!}]
+        <li><a href="#"><img src="images/icon-debit.jpg" width="64" height="35" alt="" /></a></li>
+		<li><a href="#"><img src="images/icon-kbank.jpg" width=108" height="35" alt="" /></a></li>
+	[{!pgw_vbv_logo!}]
+	[{!pgw_securecode_logo!}]
+	[{!pgw_jcb_logo!}]
+    </ul>
+    </div>
+   
+</div>
+<div class="top_text"><!-- ################################# text top web -->
+	<p class="black11"><!--Your payment is now being processed on K-Payment Gateway, an online payment system by&nbsp;<a href="http://www.kasikornbank.com/" class="green11-link">KASIKORNBANK</a>--></p>
+    <span class="black11"><!--k-Payment Gateway is the highly secure payment processor for your seller,[{!pgw_TradingName!}]. Please verify the purchase
+information and enter your Credit/Debit card details below.--></span></div>
+<div class="top_nav"><!-- ############################## menu bar -->
+     <div class="top_nav1"><!-- ############################## menu bar -->
+	<div class="btn11"><a href="#">payment detail</a></div>
+    <div class="btn21"><a href="#">payment confirmation</a></div>
+    <div class="btn31_on"><a href="#">currency conversion</a></div>
+	<div class="btn41"><a href="#">currency conversion</a></div>
+</div>
+    
+</div>
+
+<div class="area_payment"><!-- ########################## register form -->
+<div class="text">
+<span class="black11"><br />
+You are now in the process of making payment via K-Payment Gateway (a highly secure payment processor via internet) to pay for the merchant namely, [{!pgw_TradingName!}]. Please select a currency that you would like to process for this transaction. </span></div>
+	<div class="detail_top_p1">
+  <span class="font_bold">
+  </span>
+  <div align="center" class="font_bold"><font face="Verdana" size="3"><b>Your Credit/Debit Card currency is : <span id="lblCurrency"><u>[{!pgw_CurrCode!}]</u></span></font><br />
+    <br />
+  </div>
+  <div align="center" class="black11"><FONT face="Verdana" size="2">Please select a currency for this transaction:</div>
+  <span class="black11"><br />
+  <br />
+  <br />
+  <input id="optBase" type="radio" name="dcc" value="optBase" [{!BaseChecked!}]/>
+  <label for="optBase">[{!pgw_BaseAmt!}] [{!pgw_CurrCode!}]</label>
+  <br />
+  <span id="lblRate">Today exchange rate is = [{!pgw_XRate!}] Baht / 1.00 [{!pgw_CurrCode!}]</span> <br />
+  (Currency Conversion Fee is 4.50%, this amount will be shown in your Credit/Debit card statement.)
+  <br><br/>
+  <br />
+  </span>
+  <span class="black11">
+  <input id="optDCC" [{!disabled!}] type="radio" name="dcc" value="optDCC" [{!DCCChecked!}] />
+  <label for="optDCC">[{!pgw_Amt!}] Baht</label><br />
+(The figure shown in your Credit/Debit card statement will be converted to your Credit/Debit card currency.) <br />
+  <br />
+  <br />
+  </span>
+  <span class="black11">
+<input type="checkbox" name="chkConfirm" id="chkConfirm" value="checkbox" />
+  I acknowledge that Dynamic Currency Conversion is conducted by the Merchant and is
+not associated with or endorsed by VISA/MasterCard. Cardholder's Selected Transaction Currency is final.
+Cardholder has been offered a choice of currencies for payment, including the Merchant's local currency.CardHolder expressly agrees to the transaction receipt information by marking the accept box above. </span>
+	</div>
+	<!-- end detail top p2 -->
+	<!-- end detail bottom -->
+<div class="btn_con2"><!-- <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />  <br />  <br />-->
+		<!--<div class="pay5"></div>-->
+		<DIV id='Msg'></DIV>
+		<div id='pleaseWaitButtonDiv2_btnSubmit' ></div>
+		<div id='pleaseWaitButtonDiv_btnSubmit' class="btn_con2_DCC">
+		<input type="image" name="cmdPayment" id="cmdPayment" src="images/btn-accept.png" onclick="PleaseWait('pleaseWaitButtonDiv_btnSubmit', 'pleaseWaitButtonDiv2_btnSubmit','Please Wait... ');" />
+		</div>
+    </div></div><!-- end area payment -->
+
+<div class="bottom_text"><!-- ################################# text top web -->
+	<p class="black11">Remarks : Your Credit/Debit card information is strictly secured under KBank's security system. The online merchants will see only the first and last Four digits of your Credit/Debit card number with no expiration date nor the CVV2 code.</p>
+    
+</div>
+
+<div class="footer"><!-- ############################### footer -->
+	<h4 class="bottom">เครือธนาคารกสิกรไทย</h4>
+    <div class="copyright"><p class="gray12">Copyright©[{!pgw_CurrentYear!}] KASIKORNBANK Public Company Limited. All rights reserved.</p></div>
+</div>
+
+</div><!-- end container -->
+</form>
+</body>
+</html>

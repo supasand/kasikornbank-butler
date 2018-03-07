@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Confirm</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<link href="css/font.css" rel="stylesheet" type="text/css" />
+<link href="css/link.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<form name="Form1" method="post" action="Confirm.aspx" id="Form1">
+<div class="haed_payment"><!-- ############################## header -->
+	<h1 class="description">k-excellence</h1> <font color="White">[{!server_name!}]</font>
+    <h2 class="logo">ธนาคารกสิกรไทย</h2>
+</div><!-- end head -->
+
+<div class="container">
+<div class="menutop"><!-- ################################## payment detail-->
+	<h3 class="top_content">payment detail</h3>
+    <div class="top_link">
+    <ul>
+        <li><a href="#"><img src="images/icon-kbank1.jpg" alt="" width="32" height="35" border="0" /></a></li>
+        <li><a href="#"><img src="images/icon-visa2.jpg" width="46" height="35" alt="" /></a></li>
+        <li><a href="#"><img src="images/icon-mas.jpg" width="37" height="35" alt="" /></a></li>
+	[{!pgw_jcb_logo2!}]
+        <li><a href="#"><img src="images/icon-debit.jpg" width="64" height="35" alt="" /></a></li>
+		<li><a href="#"><img src="images/icon-kbank.jpg" width=108" height="35" alt="" /></a></li>
+	[{!pgw_vbv_logo!}]
+	[{!pgw_securecode_logo!}]
+	[{!pgw_jcb_logo!}]
+    </ul>
+    </div>
+   
+</div>
+<div class="top_text"><!-- ################################# text top web -->
+	<p class="black11"><!--Your payment is now being processed on K-Payment Gateway, an online payment system by <a href="http://www.kasikornbank.com/" class="green11-link">KASIKORNBANK--></a></span></p>
+    <span class="black11"><!--k-Payment Gateway is the highly secure payment processor for your seller,</span><span class="black11b">[{!pgw_TradingName!}]</span><span class="black11">. Please verify the purchase
+information and enter your Credit/Debit card details below.--></span></div>
+<div class="top_nav"><!-- ############################## menu bar -->
+	<div class="btn1"><a href="#">payment detail</a></div>
+    <div class="btn2_on"><a href="#">payment confirmation</a></div>
+    <div class="btn3"><a href="#">currency conversion</a></div>
+    
+</div>
+
+<div class="area_payment"><!-- ########################## register form -->
+<div class="text">
+<span class="black11"><br />
+K-Payment Gateway is the highly secure payment process for your seller, </span><span class="black11b"><strong>[{!pgw_TradingName!}]</strong>.  </span><span class="black11">Please verify the purchase information and your Credit/Debit card details below. </span> </div>
+	<div class="detail_top_p2">
+    	<div class="left_report_top">
+        	<div class="report_top"><p class="black11b">Pay To :</p>
+        	</div>
+            <div class="report_top"><p class="black11b">Invoice No :</p></div>
+            <div class="report_top"><p class="black11b">Payment For :</p></div>
+            <div class="report_top"><p class="black11b">Amount :</p></div>
+        </div>
+        
+        <div class="left_report_top2">
+        	<div class="report_top"><p class="black11"><span id="Payment1_lblPayToValue">[{!pgw_TradingName!}]</span></p>
+        	</div>
+            <div class="report_top"><p class="black11"><span id="Payment1_lblInvoiceNoValue">[{!pgw_InvoiceNo!}]</span></p>
+            </div>
+            <div class="report_top"><p class="black11"><span id="Payment1_lblPaymentForValue">[{!pgw_ProductDesc!}]</span></p>
+            </div>
+            <div class="report_top"><p class="black11"><span id="Payment1_lblAmountValue">[{!pgw_Amount!}]</span> <span id="Payment1_lblBahtSymbol">[{!pgw_Currency!}]</span></p>
+            </div>
+        </div>
+    </div> <!-- end detail top p2 -->
+    
+    <div class="detail_bottom">
+   		<div class="left_report">
+        	<div class="report"><p class="black11b">Credit/Debit Card Number :</p>
+        	</div>
+          <div class="report"><p class="black12"><span class="black11b">CVV2 :</span></p></div>
+            <div class="report"><p class="black12"><span class="black11b">Expiry Date (mm/yyyy) :</span></p></div>
+            <div class="report"><p class="black12"><span class="black11b">Country of issuing Bank :</span></p></div>
+            <div class="report"><p class="black12"><span class="black11b">Issuing Bank :</span></p>
+            </div>
+        </div>
+        <div class="right_report">
+        	<div class="report_top"><p class="black11"><span id="Payment1_lblCreditCardText">[{!pgw_CardNumber!}]</span> </p>
+        	</div>
+            <div class="report_top"><p class="black11"><span id="Payment1_lblCVVText">[{!pgw_CVV2!}]</span></p>
+            </div>
+            <div class="report_top"><p class="black11"><span id="Payment1_lblExpiryText">[{!pgw_ExpireDate!}]</span></p>
+            </div>
+            <div class="report_top"><p class="black11"><span id="Payment1_lblCountry">[{!pgw_Country!}]</span></p>
+            </div>
+            <div class="report_top"><p class="black11"><span id="Payment1_lblBankName">[{!pgw_Bank!}]</span></p>
+            </div>
+        </div>
+    
+	<div class="middle_report">
+		<span class="red11">[{!pgw_Message!}][{!pgw_button!}]</span>
+	</div>
+    
+	</div><!-- end detail bottom -->
+      <div class="btn_con">
+      <!--<div class="pay1"></div><div class="pay2"></div>-->
+
+	<!--<div id='pleaseWaitButtonDiv2_btnSubmit'></div>
+	<div id='pleaseWaitButtonDiv_btnSubmit'>
+		<input type="image" src='images/btn-continue.png' name="cmdContinue" id="cmdContinue" onclick="PleaseWait('pleaseWaitButtonDiv_btnSubmit', 'pleaseWaitButtonDiv2_btnSubmit', 'Please Wait... ');" />
+
+		<input type="image" src='images/btn-cancel.png' name="cmdCancel" id="cmdCancel"/>
+	</div>-->
+
+
+</div>
+</div><!-- end area payment -->
+
+<div class="bottom_text"><!-- ################################# text top web -->
+	<p class="black11">Remarks : Your Credit/Debit card information is strictly secured under KBank's security system. The online merchants will see only the first and last Four digits of your Credit/Debit card number with no expiration date nor the CVV2 code.</p>
+    
+</div>
+
+<div class="footer"><!-- ############################### footer -->
+	<h4 class="bottom">เครือธนาคารกสิกรไทย</h4>
+    <div class="copyright"><p class="gray12">Copyright©[{!pgw_CurrentYear!}] KASIKORNBANK Public Company Limited. All rights reserved.</p></div>
+</div>
+
+</div><!-- end container -->
+</form>
+</body>
+</html>
