@@ -161,6 +161,10 @@ span.input-group-addon i {
     height: 70px;
 }
 
+.copyright{
+    text-align: center;
+}
+
 @media (orientation: portrait) {
   .full {
     background-size: 200% auto;
